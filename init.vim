@@ -5,9 +5,13 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
 Plug 'ervandew/supertab'
+
+" For Telescope
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+"
+
 Plug 'https://github.com/vim-airline/vim-airline'
 Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
@@ -18,6 +22,13 @@ call plug#end()
 " colorscheme gruvbox
 colorscheme jellybeans 
 set background=dark
+
+" Find files using Telescope command-line sugar.
+" https://codevion.github.io/#!vim/telescope.md
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Splits and Tabbed Files

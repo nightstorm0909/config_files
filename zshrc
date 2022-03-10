@@ -106,7 +106,8 @@ source $ZSH/oh-my-zsh.sh
 neofetch
 
 # export PATH="/home/neel/anaconda3/bin:$PATH"  # commented out by conda initialize
-export TERM=xterm-256color
+#export TERM=xterm-256color
+export TERM=screen-256color
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
