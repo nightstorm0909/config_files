@@ -35,10 +35,6 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set splitbelow splitright
 
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
 
 filetype plugin indent on  " required
 syntax on
@@ -62,6 +58,9 @@ set mouse=a "for enbling mouse input
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
 
-nnoremap <C-f> :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => For Keybindings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+source $HOME/.config/nvim/keybindings/keybindings.vim
+
+
