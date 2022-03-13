@@ -12,8 +12,7 @@ map <C-l> <C-w>l
 """ For Tab
 nnoremap <C-l>h :tabr<cr>
 nnoremap <C-l>l :tabl<cr>
-nnoremap <C-l>j :tabp<cr>
-nnoremap <C-n> :tabn<cr>
 nnoremap <C-t> :tabnew<cr>
 nnoremap <C-x> :tabc<cr>
-
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
