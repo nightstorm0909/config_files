@@ -42,7 +42,7 @@ set number
 set relativenumber
 set hlsearch
 "set smarttab
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 set laststatus=2
 set statusline+=%F
 set cursorcolumn
