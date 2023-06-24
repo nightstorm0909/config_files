@@ -53,8 +53,11 @@ return require('packer').startup({function(use)
   }
 
   -- for lsp
-  --use {'williamboman/mason.nvim', run = ":MasonUpdate"}   -- manage external editor tooling such as LSP servers, DAP servers etc. through a single interface
-  --use 'neovim/nvim-lspconfig'   -- enable LSP
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+  }
 
   -- My plugins here
   -- use 'foo1/bar1.nvim'

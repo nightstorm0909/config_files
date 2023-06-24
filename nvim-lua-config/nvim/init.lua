@@ -4,5 +4,4 @@ require("core.plugins")
 require("core.plugin_config")
 require("core.cmp")
 require("core.telescope")
---require("core.lsp")
-
+require("core.lsp")
