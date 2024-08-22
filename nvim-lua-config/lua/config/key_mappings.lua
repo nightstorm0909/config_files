@@ -1,3 +1,5 @@
+--vim.g.mapleader = " "
+
 -- For split
 vim.keymap.set('n', '<C-h>', '<C-w>h')
 vim.keymap.set('n', '<C-j>', '<C-w>j')
