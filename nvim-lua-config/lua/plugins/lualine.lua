@@ -16,6 +16,7 @@ return
           red    = '#ff5189',
           violet = '#d183e8',
           grey   = '#303030',
+          green  = '#0d7c66',
         }
 
         local bubbles_theme = {
@@ -25,8 +26,8 @@ return
             c = { fg = colors.white },
           },
 
-          insert = { a = { fg = colors.black, bg = colors.blue } },
-          visual = { a = { fg = colors.black, bg = colors.cyan } },
+          insert = { a = { fg = colors.white, bg = colors.green } },
+          visual = { a = { fg = colors.black, bg = colors.blue } },
           replace = { a = { fg = colors.black, bg = colors.red } },
 
           inactive = {
@@ -44,7 +45,7 @@ return
           },
           sections = {
             lualine_a = { { 'mode', separator = { left = '' }, right_padding = 2 } },
-            lualine_b = { 'filename', 'branch' },
+            lualine_b = { {'filename', path = 1}, 'branch' },
             lualine_c = {
               '%=', --[[ add your center compoentnts here in place of this comment ]]
             },

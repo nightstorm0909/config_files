@@ -6,15 +6,37 @@ return
     },
     --init = function() vim.g.barbar_auto_setup = false end,
     opts = {
-      clickable = true, -- Enable / disable clickable tabs
-      tabpages = true, -- Enable/disable current/total tabpages indicator (top right corner)
-      icons = true,
+        clickable = true, -- Enable / disable clickable tabs
+        tabpages = true, -- Enable/disable current/total tabpages indicator (top right corner)
+        icons = true,
+    },
+
+    options = {
+        numbers = "buffer_id",  -- Display buffer number in tabs
     },
 
     config = function()
         local map = vim.api.nvim_set_keymap
-        local opts = { noremap = true, silent = true }
+        local opts = { 
+           noremap = true,
+            silent = true,
+        }
+        
+        -- Colorschemes
+        -- Customize barbar highlights for selected and unselected tabs
+        vim.api.nvim_set_hl(0, "BufferCurrent",       { fg = "#ffffff", })  -- Selected tab text
+        vim.api.nvim_set_hl(0, "BufferCurrentIndex",  { fg = "#ffffff", })  -- Selected tab index
+        vim.api.nvim_set_hl(0, "BufferCurrentMod",    { fg = "#e0af68", })  -- Selected tab modified sign
+        vim.api.nvim_set_hl(0, "BufferCurrentSign",   { fg = "#ffaf00", })  -- Selected tab sign color
+        vim.api.nvim_set_hl(0, "BufferCurrentTarget", { fg = "#ff0000", bold = true })  -- Selected tab close button
 
+        vim.api.nvim_set_hl(0, "BufferVisible",       { fg = "#c0c0c0", bg = "#2c2c2c" })  -- Unselected tab text
+        vim.api.nvim_set_hl(0, "BufferVisibleIndex",  { fg = "#c0c0c0", bg = "#2c2c2c" })  -- Unselected tab index
+        vim.api.nvim_set_hl(0, "BufferVisibleMod",    { fg = "#e0af68", bg = "#2c2c2c" })  -- Unselected tab modified sign
+        vim.api.nvim_set_hl(0, "BufferVisibleSign",   { fg = "#ffaf00", bg = "#2c2c2c" })  -- Unselected tab sign color
+        vim.api.nvim_set_hl(0, "BufferVisibleTarget", { fg = "#ff0000", bg = "#2c2c2c", bold = true })  -- Unselected tab close button
+        
+        -- Keymaps
         -- Move to previous/next
         map('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opts)
         map('n', '<A-.>', '<Cmd>BufferNext<CR>', opts)
